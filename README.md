@@ -9,7 +9,7 @@ typescript:
 ```
 import {stringify} from "stringify-log";
 
-let str = stringify(new TypeError('hehe'));
+let str = stringify(new TypeError('hehe'), false);
 
-// {"message": "hehe"}
+// {"message":"hehe"}
 ```

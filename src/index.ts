@@ -14,7 +14,7 @@ function errorReplacer(key: string, value: { [key: string]: any }) {
     return value;
 }
 
-export function stringify(thing: any) {
+export function stringify(thing: any, excludeStack: boolean = false) {
     let string;
 
     switch (typeof thing) {
@@ -22,7 +22,8 @@ export function stringify(thing: any) {
             if (Array.isArray(thing)) {
                 string = `${thing.length}:${JSON.stringify(thing)}`;
             } else if (thing instanceof Error) {
-                // delete thing.stack;
+                if (excludeStack)
+                    delete thing.stack;
                 string = JSON.stringify(thing, errorReplacer);
             } else {
                 string = JSON.stringify(thing);
