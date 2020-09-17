@@ -1,6 +1,6 @@
 {
   "name": "stringify-log-objects",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Stringify as JSON in order to log: objects, arrays, errors",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
