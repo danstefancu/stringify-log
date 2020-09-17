@@ -2,4 +2,3 @@ node_modules/*
 dist/*
 .idea/workspace.xml
 .nyc_output
-package-lock.json
