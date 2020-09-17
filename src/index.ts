@@ -1,6 +1,7 @@
 function errorReplacer(key: string, value: { [key: string]: any }) {
     if (value instanceof Error) {
         let error: { [key: string]: any } = {};
+        // just for tsc sake
         value = value as { [key: string]: any };
 
         Object.getOwnPropertyNames(value).forEach(function (key: string) {

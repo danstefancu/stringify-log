@@ -1,2 +1,5 @@
 src
+test
+.nvmrc
+.nycrc
 tsconfig.json
